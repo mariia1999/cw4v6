@@ -38,7 +38,7 @@ def filter_keywords():
     all_vacancies = saver.get_vacancies()
 
     for vacancy in all_vacancies:
-        if vacancy in Vacancy.name:
+        if vacancy in vacancy.name:
             result.append(vacancy)
     return result
 
