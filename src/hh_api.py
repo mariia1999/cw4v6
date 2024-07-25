@@ -25,7 +25,7 @@ class HeadHunter(AbstractApi):
 
     def get_response(self, text: str, per_page: int) -> Response:
         """Запрос на API hh.ru"""
-        params = {"text": f"NAME:{text}", "per_page": per_page}
+        params = {"text": f"NAME:{text}", "per_page": per_page, "page": 0}
         response = requests.get(self.__url, params=params)
         return response
 
